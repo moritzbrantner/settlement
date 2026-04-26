@@ -1,0 +1,13 @@
+/target/
+/node_modules/
+/dist/
+/.vite/
+/playwright-report/
+/test-results/
+*.tsbuildinfo
+**/node_modules/
+**/dist/
+**/.vite/
+**/playwright-report/
+**/test-results/
+**/*.tsbuildinfo

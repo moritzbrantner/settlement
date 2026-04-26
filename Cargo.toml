@@ -1,0 +1,14 @@
+[package]
+name = "settlement_game"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+publish = false
+
+[workspace]
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+farm_nav = { git = "https://github.com/moritzbrantner/farm-game-engine", rev = "956681e079ef0ffbc6d5393ddd01b65264e3a387" }

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynasty</title>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="info-panel">
+        <p class="eyebrow">Dynasty</p>
+        <h1>Frontier camp</h1>
+        <p class="intro">
+          Rowan and Mira can farm wood and berries, then raise a fireplace and a hut from the same
+          camp board.
+        </p>
+
+        <dl class="stats">
+          <div>
+            <dt>Turn</dt>
+            <dd id="stat-turn-count"></dd>
+          </div>
+          <div>
+            <dt>Total tiles</dt>
+            <dd id="stat-tile-count"></dd>
+          </div>
+          <div>
+            <dt>Workers</dt>
+            <dd id="stat-worker-count"></dd>
+          </div>
+        </dl>
+
+        <section class="stockpile-card">
+          <p class="section-label">Stockpile</p>
+          <div class="stockpile-grid">
+            <div>
+              <span>Wood</span>
+              <strong id="stat-wood-count"></strong>
+            </div>
+            <div>
+              <span>Berries</span>
+              <strong id="stat-berry-count"></strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="selection-card">
+          <p class="section-label">Selected worker</p>
+          <h2 id="worker-name">No worker selected</h2>
+          <p id="worker-task" class="worker-task">No task assigned</p>
+          <p id="worker-summary">Click the man or woman token on the board.</p>
+        </section>
+
+        <section class="orders-card">
+          <div class="panel-header">
+            <p class="section-label">Orders</p>
+            <button id="advance-turn" class="advance-button" type="button">Advance Turn</button>
+          </div>
+          <div id="task-buttons" class="task-buttons"></div>
+        </section>
+
+        <section class="construction-card">
+          <p class="section-label">Construction</p>
+          <div id="construction-list" class="construction-list"></div>
+        </section>
+
+        <section class="feedback-card">
+          <p class="section-label">Last turn</p>
+          <p id="feedback-message">
+            Select a worker, assign a job, then advance the turn to gather supplies or build.
+          </p>
+        </section>
+
+        <section class="legend">
+          <p class="section-label">Legend</p>
+          <div class="legend-row">
+            <span class="legend-swatch legend-core"></span>
+            <span>Camp center</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-swatch legend-field"></span>
+            <span>Outer frontier</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-swatch legend-resource"></span>
+            <span>Resource tile</span>
+          </div>
+          <div class="legend-row">
+            <span class="legend-swatch legend-blueprint"></span>
+            <span>Build site</span>
+          </div>
+        </section>
+      </aside>
+
+      <main class="board-panel">
+        <div class="board-header">
+          <div>
+            <p class="section-label">Village board</p>
+            <h2>Dynasty camp</h2>
+          </div>
+          <p class="board-note">Assign work, then advance the turn.</p>
+        </div>
+
+        <div class="board-stage">
+          <svg id="hex-map" class="hex-map" aria-label="Dynasty hex map" role="img"></svg>
+          <div id="feature-layer" class="feature-layer" aria-hidden="true"></div>
+          <div id="worker-layer" class="worker-layer" aria-label="Workers"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
