@@ -11,4 +11,4 @@ publish = false
 crate-type = ["rlib", "cdylib"]
 
 [dependencies]
-farm_nav = { git = "https://github.com/moritzbrantner/farm-game-engine", rev = "956681e079ef0ffbc6d5393ddd01b65264e3a387" }
+farm_nav = { git = "https://github.com/moritzbrantner/farm-nav", rev = "0a97523142f73568b324a48b52ddb88685d10668" }
